@@ -1,0 +1,102 @@
+$white: #ffffff;
+$grey-500: #4d4f62;
+$grey-400: #6a7178;
+$cyan: #44d3d2;
+$red: #ea5454;
+$blue: #549ef2;
+$orange: #fcae4a;
+
+@font-face {
+  font-family: 'Poppins Semibold';
+  src: url('./assets/font/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Extra Light';
+  src: url('./assets/font/Poppins/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('./assets/font/Poppins/Poppins-Regular.ttf');
+}
+
+%text-preset-1 {
+  font-family: 'Poppins Semibold';
+  font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+%text-preset-2 {
+  font-family: 'Poppins Extra Light';
+  font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+%text-preset-3 {
+  font-family: 'Poppins Semibold';
+  font-size: 2rem;
+  line-height: 1.35;
+}
+
+%text-preset-4 {
+  font-family: 'Poppins Regular';
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+}
+
+%text-preset-5 {
+  font-family: 'Poppins Regular';
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
+  color: $grey-500;
+
+  h1 {
+    @extend %text-preset-2;
+  }
+
+  strong {
+    @extend %text-preset-1;
+  }
+
+  p {
+    @extend %text-preset-4;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
