@@ -181,6 +181,10 @@ header {
     height: 4rem;
     align-self: flex-end;
   }
+
+  @media (min-width: 90rem) {
+    width: 21.875rem;
+  }
 }
 
 .attribution {
