@@ -37,7 +37,7 @@ $orange: #fcae4a;
 
 %text-preset-3 {
   font-family: 'Poppins Semibold';
-  font-size: 2rem;
+  font-size: 1.25rem;
   line-height: 1.35;
 }
 
@@ -50,8 +50,23 @@ $orange: #fcae4a;
 
 %text-preset-5 {
   font-family: 'Poppins Regular';
-  font-size: 1.3rem;
+  font-size: 0.8125rem;
   line-height: 1.6;
+  letter-spacing: 0.09px;
+}
+
+.shadow {
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body,
@@ -62,10 +77,8 @@ p {
 }
 
 body {
-  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #fafafa;
 }
@@ -73,11 +86,12 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
   text-align: center;
   color: $grey-500;
+  width: clamp(19.75rem, 6.3912rem + 56.9975vw, 33.75rem);
+  margin-top: clamp(3.5rem, 2.4877rem + 4.3192vw, 6.375rem);
+  margin-bottom: clamp(3.75rem, 2.9151rem + 3.5623vw, 4.625rem);
 
   h1 {
     @extend %text-preset-2;
@@ -90,6 +104,70 @@ header {
   p {
     @extend %text-preset-4;
   }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: clamp(2.875rem, 0.3002rem + 10.9859vw, 10.1875rem);
+
+  .line-cyan {
+    border-top: 4px solid $cyan;
+  }
+
+  .line-blue {
+    border-top: 4px solid $blue;
+  }
+
+  .line-red {
+    border-top: 4px solid $red;
+  }
+
+  .line-orange {
+    border-top: 4px solid $orange;
+  }
+}
+
+.service__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: $white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 15.625rem;
+
+  div {
+    display: flex;
+    width: 15.625rem;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  h2 {
+    @extend %text-preset-3;
+    color: $grey-500;
+  }
+
+  p {
+    @extend %text-preset-5;
+    color: $grey-400;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    align-self: flex-end;
+  }
+}
+
+.content__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .attribution {
